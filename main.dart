@@ -2,12 +2,11 @@ import 'dart:io';
 
 // import 'adminpanel.dart';
 
-
+import 'adminpanel.dart';
 import 'parentalAcces.dart';
-import 'prc.dart';
 import 'schoolInquairy.dart';
-// import 'studentPayment.dart';
-// import 'student_addmission.dart';
+import 'student_addmission.dart';
+import 'studentPayment.dart';
 
 void main() {
   mainn();
@@ -48,11 +47,11 @@ mainn() {
     // studentadmission();
     studentadmission();
   } else if (userInput == 3) {
-    // schoolPayment();
-  }  else if (userInput == 4) {
+    schoolPayment();
+  } else if (userInput == 4) {
     parentalAcces();
   } else if (userInput == 5) {
-    // adminPanel();
+    adminPanel();
   } else {
     print('this key does not exist in this program');
   }
