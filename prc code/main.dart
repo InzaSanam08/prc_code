@@ -2,8 +2,9 @@ import 'dart:io';
 
 // import 'adminpanel.dart';
 
-import '../../prc.dart';
+
 import 'parentalAcces.dart';
+import 'prc.dart';
 import 'schoolInquairy.dart';
 // import 'studentPayment.dart';
 // import 'student_addmission.dart';
