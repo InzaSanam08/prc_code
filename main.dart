@@ -52,7 +52,10 @@ mainn() {
     parentalAcces();
   } else if (userInput == 5) {
     adminPanel();
-  } else {
+  }else if (userInput == 6) {
+   print("Program Exit");
+  }
+   else {
     print('this key does not exist in this program');
   }
 }

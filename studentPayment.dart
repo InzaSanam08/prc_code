@@ -24,16 +24,25 @@ void schoolPayment() {
         if (student.containsKey(studentId)) {
           userFound = true;
           print('User name found: ${student[studentId]['student Name']}');
-          print('--:  Please enter amount: 3000  :--');
-
+          
+          print('--:  Please enter or check  amount: 3000  :--');
+        
           String? studentPayment = stdin.readLineSync()?.trim();
+         
+            if (student[studentId]['ispaid']== "3000") {
+              print ('you already paid');
+              break;
+            }
 
-          if (studentPayment != null && studentPayment == '3000') {
+         else if (studentPayment != null && studentPayment == '3000') {
             student[studentId]['isPaid'] = studentPayment;
             print('''Payment status updated:student is = ${student[studentId]['student Name']}  
-            and paid =  ${student[studentId]['isPaid']}''');
+            and paid =  ${student[studentId]['ispaid']}''');
+
+
 
            // while loop for go back to home
+
 
                  {
 
