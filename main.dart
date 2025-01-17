@@ -38,24 +38,32 @@ mainn() {
 =                                                                       =
 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
   ''');
-
+  bool isContinue = true;
+ while (isContinue) {
+   
   int userInput = int.parse(stdin.readLineSync()!);
 
   if (userInput == 1) {
     schoolInquairy();
+    isContinue = false;
   } else if (userInput == 2) {
-    // studentadmission();
     studentadmission();
+    isContinue = false;
   } else if (userInput == 3) {
     schoolPayment();
+    isContinue = false;
   } else if (userInput == 4) {
     parentalAcces();
+    isContinue = false;
   } else if (userInput == 5) {
     adminPanel();
+    isContinue = false;
   }else if (userInput == 6) {
-   print("Program Exit");
+          print("--: Program Exit :--");
   }
    else {
-    print('this key does not exist in this program');
-  }
+    print('this key does not exist in this program ');
+          print("--: Try Again :--");
+    isContinue = true;
+  }}
 }

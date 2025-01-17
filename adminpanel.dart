@@ -152,12 +152,12 @@ void login() {
     String? adminEmail = stdin.readLineSync();
     print('--: Please enter your password :--');
     String? adminPassword = stdin.readLineSync();
-    if (adminEmail == "hasee@gmail.com" && adminPassword == "123") {
+    if (adminEmail == "haseeb@gmail.com" && adminPassword == "123") {
       print(''' --- --- --:( Login successful, thank you ):-- --- --- ''');
       schoolData();
       islogin = false;
     } else {
-      if (adminEmail != "hasee@gmail.com") {
+      if (adminEmail != "haseeb@gmail.com") {
         print("Your email is incorrect, try again.");
       }
       if (adminPassword != "123") {

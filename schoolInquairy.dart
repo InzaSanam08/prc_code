@@ -28,24 +28,36 @@ schoolInquairy() {
 =                                                                             =
 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 ''');
+ bool isContinue =true;
 
+ while (isContinue) {
   var userInPut = stdin.readLineSync();
 
   if (userInPut == "1") {
     AboutSchool();
+    isContinue =false;
   } else if (userInPut == "2") {
     SchoolRules();
+    isContinue =false;
   } else if (userInPut == "3") {
     AgeCrateria();
+    isContinue =false;
   } else if (userInPut == "4") {
     DocumentRequired();
+    isContinue =false;
   } else if (userInPut == "5") {
     HealthandSafetyPolicies();
+    isContinue =false;
   } else if (userInPut == "6") {
    HealthandSafetyPolicies();
+   isContinue =false;
   } else {
-    print("--: Key This Do's Not exist  :--");
-  }
+    print("--: Key This Do's Not exist :--");
+          
+          print("--: Try Again :--");
+          
+ isContinue =true;
+  }}
 }
 
 // About School
