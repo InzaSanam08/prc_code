@@ -99,6 +99,11 @@ AboutSchool() {
 ''');
 
 
+
+
+
+
+
 continueOrExitPrograme();
      }
 
@@ -135,6 +140,8 @@ SchoolRules() {
 10. Pets: Students must not bring pets to school unless it is part of a lesson. ''');
 
 
+      
+
 
 
 continueOrExitPrograme();
@@ -168,6 +175,12 @@ AgeCrateria() {
 13 =>  Class 9	14-15 Years
 14 =>  Class 10	15-16 Years
 ''');
+
+
+
+
+
+
 
 
 continueOrExitPrograme();
@@ -204,6 +217,11 @@ DocumentRequired() {
 ''');
 
 
+
+
+
+
+
 continueOrExitPrograme();
 
 
@@ -238,6 +256,10 @@ HealthandSafetyPolicies() {
 9. Health Screenings: Regular health check-ups and screenings for students and staff.
 
 10.Mental Health Support: Providing access to counselors and mental health resources.''');
+
+
+
+
 
 
 continueOrExitPrograme();

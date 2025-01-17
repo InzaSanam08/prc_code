@@ -6,23 +6,17 @@ import 'student_addmission.dart';
 List<Map<dynamic, dynamic>> allList = oldstudentsData + newAdmissionStudentData;
 
 adminPanel() {
-
-
-
-   print('''
+  print('''
                     ===================================   
 
                   =====    wellcome to GB school    =====
 
                     =================================== 
  ''');
- login();
-
+  login();
 }
 
 schoolData() {
- 
-
   print('''
 
 
@@ -57,15 +51,12 @@ schoolData() {
   } else if (adminInput == '2') {
     delete();
   } else if (adminInput == '3') {
- oldStudentsAdmissionList();
+    oldStudentsAdmissionList();
   } else if (adminInput == '4') {
     mainn();
-  }
-  else if (adminInput == '5') {
-logOut();
-  } 
-  
-  else {
+  } else if (adminInput == '5') {
+    logOut();
+  } else {
     print('--:  this key does not exist  :--');
   }
 }
@@ -105,96 +96,85 @@ oldStudentsAdmissionList() {
   }
 }
 
-
-
-
-/////////   delete studen data 
+/////////   delete studen data
 
 delete() {
+  print('--:  here is all student data  :--');
 
-print('--:  here is all student data  :--');
-
-print(allList);
+  print(allList);
 
   print('--:  Enter Student ID  :--');
 
   String studentId = stdin.readLineSync()!;
- 
-bool isFound  = true;
 
-   for (var i in allList) {
+  bool isFound = true;
+
+  for (var i in allList) {
     if (i.containsKey(studentId)) {
-     
-    i.remove(studentId); 
-    isFound= false;
-    } }
-if (isFound) { 
-  print('Student id  ${studentId}  has been removed.'); 
+      i.remove(studentId);
+      isFound = false;
+    }
   }
-   else { print('--:  Name not found in the list  :--'); }
+  if (isFound) {
+    print('Student id  ${studentId}  has been removed.');
+  } else {
+    print('--:  Name not found in the list  :--');
+  }
 
-    print('All Data Of Students $oldstudentsData');
+  print('All Data Of Students $oldstudentsData');
 
-    print('--:  if you want to go back main menu Enter back  :--');
- bool iscontinue = true;
-    while (iscontinue) {
-  print("--:     1.  if yiu want to go back main menu Enter 'back'    :--");
-  print('--:     2.  If You want to Exit program Enter any key        :--');
-      String userinput = stdin.readLineSync()!;
+  print('--:  if you want to go back main menu Enter back  :--');
+  bool iscontinue = true;
+  while (iscontinue) {
+    print("--:     1.  if yiu want to go main menu Enter 'back'    :--");
+    print('--:     2.  If You want to Exit program Enter any key        :--');
+    String userinput = stdin.readLineSync()!;
 
-      if (userinput != null && userinput == 'back') {
-        mainn();
-        iscontinue = false;
-      }  else {
-        print('--:  program Exit  :--');
-        iscontinue = true;
-      }
-
-      break;
+    if (userinput == 'back') {
+      mainn();
+      iscontinue = false;
+    } else if (userinput != 'back') {
+      print('Enter valid key');
+    } else {
+      print('--:  program Exit  :--');
+      iscontinue = true;
     }
 
+    break;
+  }
 }
 
-
-login(){
-
-  print('--:  please login for admin panel  :--');
-
-  print('--:  please enter your Email :--');
-  String adminEmail = stdin.readLineSync()!;
-
-  print('--:  please enter your password :--');
-  String adminPassword = stdin.readLineSync()!;
-
+void login() {
+  print('--: Please login for admin panel :--');
   bool islogin = true;
-
   while (islogin) {
-    if (adminEmail == 'haseebgmail.com' && adminPassword == 'baba') {
-      print('--:  login succesfull thank you  :--');
-      islogin = false;
+    print('--: Please enter your Email :--');
+    String? adminEmail = stdin.readLineSync();
+    print('--: Please enter your password :--');
+    String? adminPassword = stdin.readLineSync();
+    if (adminEmail == "hasee@gmail.com" && adminPassword == "123") {
+      print(''' --- --- --:( Login successful, thank you ):-- --- --- ''');
       schoolData();
-    } else if (adminEmail != 'haseebgmail.com') {
-      print('--:  your email is incorrect try again  :--');
-  
+      islogin = false;
     } else {
-      print('--:  your password is incorrect try again  :--');
-
+      if (adminEmail != "hasee@gmail.com") {
+        print("Your email is incorrect, try again.");
+      }
+      if (adminPassword != "123") {
+        print("Your password is incorrect, try again.");
+      }
     }
   }
+}
 
-
-
- }
-
-logOut(){
-
+logOut() {
   print('--:  Do you want to LogOut (yes / no)  :--');
   String userChoice = stdin.readLineSync()!;
 
   bool islogout = true;
 
   while (islogout) {
-    if (userChoice == 'yes' ) {
+    if (userChoice == 'yes') {
       print('''
       ---                                 ---    
        --:( logOut succesfull thank you ):--
@@ -206,12 +186,11 @@ logOut(){
     ---                          ---
      --:( you are still logIn ) :--
     ---                          ---     
-     '''); 
-     islogout = false ;
+     ''');
+      islogout = false;
     } else {
       print('''--:( InVailed Choise Try Again ):--''');
-      userChoice = stdin.readLineSync()!; 
+      userChoice = stdin.readLineSync()!;
     }
   }
-
 }
