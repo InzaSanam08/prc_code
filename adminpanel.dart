@@ -42,6 +42,8 @@ schoolData() {
 =  3.    ==>  if you want to see old students data students enter number  3   =
 = - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - =
 =  4.    ==>  If you Want to go main menu Enter   4                           =
+= - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - =
+=  5.    ==>  If You Want to logOut Enter   5                                 = 
 = - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - =                                                                             
 = - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - =                                                                               
 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =    
@@ -58,7 +60,12 @@ schoolData() {
  oldStudentsAdmissionList();
   } else if (adminInput == '4') {
     mainn();
-  } else {
+  }
+  else if (adminInput == '5') {
+logOut();
+  } 
+  
+  else {
     print('--:  this key does not exist  :--');
   }
 }
@@ -168,10 +175,10 @@ login(){
       schoolData();
     } else if (adminEmail != 'haseebgmail.com') {
       print('--:  your email is incorrect try again  :--');
-         islogin=true;
+  
     } else {
       print('--:  your password is incorrect try again  :--');
-         islogin=true;
+
     }
   }
 
@@ -181,23 +188,20 @@ login(){
 
 logOut(){
 
-
-  // print('--:  please login for admin panel  :--');
-
   print('--:  Do you want to LogOut (yes / no)  :--');
   String userChoice = stdin.readLineSync()!;
 
   bool islogout = true;
 
   while (islogout) {
-    if (userChoice == 'yes' && userChoice != 'no' ) {
+    if (userChoice == 'yes' ) {
       print('''
       ---                                 ---    
        --:( logOut succesfull thank you ):--
       ---                                 --- 
       ''');
       islogout = false;
-    } else if (userChoice != 'yes' && userChoice == 'no') {
+    } else if (userChoice == 'no') {
       print('''
     ---                          ---
      --:( you are still logIn ) :--
@@ -209,6 +213,5 @@ logOut(){
       userChoice = stdin.readLineSync()!; 
     }
   }
-
 
 }

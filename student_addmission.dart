@@ -53,12 +53,25 @@ void studentadmission() {
     while (true) {
       print('--:  Enter student Id :--');
       studentId = stdin.readLineSync()!;
-
-      if (studentId.isNotEmpty) {
+       
+ if (studentId.isNotEmpty) {
         newAdmissionStudentData.add({studentId: {}});
         break;
-      } else {
-        print('--:  You did not enter the Id correctly  :--');
+      }  
+ 
+
+     else  if  (oldstudentsData.contains(studentId)){
+        print('--:  this key Exist enter another Id   :--');
+        isadmitted = true;
+      }
+      // else if (oldstudentsData.contains(studentId)){
+      //   print('--:  thid key Exist enter another Id   :--');
+      //   isadmitted =true;
+      // }
+       
+       else {
+        print('--:  You did not enter the Id correctly try Again  :--');
+        isadmitted = true;
       }
     }
 
