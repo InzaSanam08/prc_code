@@ -1,6 +1,8 @@
 
 import 'dart:io';
 
+import 'main.dart';
+
 List<Map<dynamic, dynamic>> newAdmissionStudentData = [];
 
 List<Map<dynamic, dynamic>> oldstudentsData = [
@@ -47,27 +49,29 @@ List<Map<dynamic, dynamic>> oldstudentsData = [
 ];
 
 void studentadmission() {
+  
+ List <Map<dynamic,dynamic>> allList = oldstudentsData+ newAdmissionStudentData;
+
   bool isadmitted = true;
   while (isadmitted) {
     String studentId = "";
     while (true) {
+      
       print('--:  Enter student Id :--');
       studentId = stdin.readLineSync()!;
-       
+ 
+
  if (studentId.isNotEmpty) {
         newAdmissionStudentData.add({studentId: {}});
         break;
       }  
+ 
  
 
      else  if  (oldstudentsData.contains(studentId)){
         print('--:  this key Exist enter another Id   :--');
         isadmitted = true;
       }
-      // else if (oldstudentsData.contains(studentId)){
-      //   print('--:  thid key Exist enter another Id   :--');
-      //   isadmitted =true;
-      // }
        
        else {
         print('--:  You did not enter the Id correctly try Again  :--');
@@ -168,6 +172,7 @@ void studentadmission() {
       isadmitted = true;
       print('--:  Program is continuing  :--');
     } else if (userInput == 'back') {
+      mainn();
       isadmitted = false;
     } else {
       isadmitted = false;

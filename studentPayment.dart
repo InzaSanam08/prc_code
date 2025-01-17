@@ -139,7 +139,7 @@ void schoolPayment() {
 
 
           if (student[studentId]['isPaid'] == "3000") {
-            print('You already paid');
+            print('${student[studentId]['student Name']} : is already paid');
             break;
           }else {
                     print('you did not paid ');

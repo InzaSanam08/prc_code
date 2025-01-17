@@ -14,17 +14,17 @@ schoolInquairy() {
 
 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = 
 =                                                                             =
-=              ==>  if want to know about School Enter  1                     =
+=        1.    ==>  if want to know about School Enter  1                     =
 =                                                                             =
-=              ==>   If you want to know about School Rules Enter  2          =
+=        2.    ==>   If you want to know about School Rules Enter  2          =
 =                                                                             =
-=              ==>   Age crateria for school Enter  3                         =
+=        3.    ==>   Age crateria for school Enter  3                         =
 =                                                                             =
-=              ==>   Document Required for admission Enter  4                 =
+=        4.    ==>   Document Required for admission Enter  4                 =
 =                                                                             =
-=              ==>   Health and Safety policies Enter  5                      =
+=        5.    ==>   Health and Safety policies Enter  5                      =
 =                                                                             =
-=              ==>   Health and Safety policies Enter  6                      =
+=        6.    ==>   Health and Safety policies Enter  6                      =
 =                                                                             =
 = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 ''');
@@ -42,9 +42,9 @@ schoolInquairy() {
   } else if (userInPut == "5") {
     HealthandSafetyPolicies();
   } else if (userInPut == "6") {
-    mainn();
+   HealthandSafetyPolicies();
   } else {
-    print("--:  This Do's Not exist  :--");
+    print("--: Key This Do's Not exist  :--");
   }
 }
 
